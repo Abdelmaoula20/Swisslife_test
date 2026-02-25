@@ -105,14 +105,38 @@ POST /classify
 
 ### Input Example
 
-{ "text": "I was charged twice and my connection is unstable.",
-"themes": \[ { "title": "Technical support", "description": "Tech
-issues" }, { "title": "Billing", "description": "Payment issues" } \] }
+```json
+{
+    "text": "I am calling because I have a problem with my internet connection",
+    "themes": [
+        {
+            "title": "Technical support",
+            "description": "The customer is calling for technical support"
+        },
+        {
+            "title": "Billing",
+            "description": "The customer is calling for billing issues"
+        },
+        {
+            "title": "Refund",
+            "description": "The customer is calling for a refund"
+        }
+    ]
+}
+```
 
 ### Output Example
 
-{ "model_reasoning": "...", "chosen_theme": { "title": "Billing",
-"description": "Payment issues" }, "confidence": 1.0 }
+```json
+{
+    "model_reasoning": "This text is about technical support, therefore the chosen theme is 'Technical support'.",
+    "chosen_theme": {
+        "title": "Technical support",
+        "description": "The customer is calling for technical support",
+        "confidence":1.0
+    }
+}
+```
 
 ### Bonus 1 -- Probabilistic Classification
 
@@ -134,10 +158,21 @@ POST /form-completion
 
 ### Output Example
 
-{ "personal_info": { "first_name": "John", "last_name": "Doe", "gender":
-null }, "contact_info": { "email": "johndoe@example.com", "phone": null,
-"preferred_contact_method": "Email", "call_reasons": null } }
-
+```json
+{
+  "personal_info": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "gender": null
+  },
+  "contact_info": {
+    "email": "johndoe@example.com",
+    "phone": null,
+    "preferred_contact_method": "Email",
+    "call_reasons": null
+  }
+}
+```
 ------------------------------------------------------------------------
 
 ## 9. Robustness Features
