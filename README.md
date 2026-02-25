@@ -73,7 +73,7 @@ uv sync
 
 Create a .env file:
 
-OPENAI_API_KEY=your_api_key\
+OPENAI_API_KEY=api_key\
 OPENAI_BASE_URL=https://api.studio.nebius.ai/v1
 
 ------------------------------------------------------------------------
