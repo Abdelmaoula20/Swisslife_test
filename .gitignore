@@ -29,3 +29,6 @@ build/
 
 # Jupyter
 .ipynb_checkpoints/
+
+#Baml client
+baml_client/
