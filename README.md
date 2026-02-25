@@ -18,15 +18,6 @@ The system is built using:
 -   UV (dependency & environment management)
 -   Nebius Inference API (LLM provider)
 
-The implementation focuses on:
-
--   Structured generation
--   Robustness
--   Production-ready architecture
--   Error handling
--   Observability
--   Deterministic behavior
-
 ------------------------------------------------------------------------
 
 ## 2. Architecture
@@ -144,10 +135,6 @@ POST /classify
 -   Majority vote aggregation
 -   Empirical confidence score
 
-Note: In constrained classification tasks, the model behaves
-near-deterministically, often resulting in confidence = 1.0. This
-reflects strong convergence rather than instability.
-
 ------------------------------------------------------------------------
 
 ## 8. Use Case 2 -- Form Completion
@@ -175,34 +162,3 @@ POST /form-completion
 ```
 ------------------------------------------------------------------------
 
-## 9. Robustness Features
-
--   Strict JSON schema enforcement via BAML
--   Enum validation
--   Retry mechanism on transient LLM failures
--   Structured logging
--   Defensive error handling (500 / 503 / 422)
-
-------------------------------------------------------------------------
-
-## 10. Production Considerations
-
--   Temperature = 0 for deterministic behavior
--   Async parallel execution
--   Stateless API design
--   Prompt injection mitigation rules
-
-------------------------------------------------------------------------
-
-## 11. Conclusion
-
-This implementation prioritizes:
-
--   Robustness
--   Determinism
--   Clean architecture
--   Structured LLM usage
--   Production-readiness
-
-The probabilistic classification mechanism demonstrates understanding of
-LLM stochastic behavior while maintaining enterprise-grade stability.
