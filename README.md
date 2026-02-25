@@ -31,21 +31,24 @@ The implementation focuses on:
 
 ## 2. Architecture
 
+```
 project/
 │
 ├── app/
 │   ├── main.py
 │   ├── routes/
 │   ├── services/
-│   ├── models/
+│   └── models/
 │
 ├── baml_src/
 │   ├── clients.baml
 │   ├── classification.baml
-│   ├── form_completion.baml
+│   └── form_completion.baml
 │
 ├── baml_client/
+│
 └── README.md
+```
 
 Design principles:
 
