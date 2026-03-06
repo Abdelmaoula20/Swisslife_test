@@ -1,7 +1,3 @@
-# **Technical Test AI Swiss Life- Data Scientist**
-
-**Candidate: Abdelmaoula Essabbahi**
-
 ------------------------------------------------------------------------
 
 ## 1. Overview
